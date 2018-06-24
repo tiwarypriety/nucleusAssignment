@@ -1,17 +1,48 @@
-package person;
 
-public class Student extends Person{
-    
-    private String major;
-  Student(String name, int year, String major) {
-    super(name, year);
-    this.major = major;
-  }
-  void display(){
-      System.out.println(getName()+" "+getYear()+" "+getMajor());
-  }
+package student;
 
-    public String getMajor() {
-        return major;
+public class Student {
+    private int id;
+    private String name;
+    private int cId;
+    private String contact;
+    private String sex;
+    Student(int id,String name , int cId, String contact, String sex){
+        this.id = id;
+        this.name = name;
+        this.cId = cId;
+        this.contact = contact;
+        this.sex = sex;
+    }          
+    void modifyNumber(String num){
+        setContact(num);
     }
+
+    public int getId() {
+        return id;
+    }
+
+  
+    public String getName() {
+        return name;
+    }
+
+ 
+    public int getcId() {
+        return cId;
+    }
+
+  
+    public String getContact() {
+        return contact;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+    
 }

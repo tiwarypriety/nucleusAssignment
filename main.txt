@@ -1,34 +1,16 @@
 
-
-package car;
-
-import java.util.Scanner;
+package student;
 
 
 public class Main {
+    
     public static void main(String a[]){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Your Choice:");
-        System.out.println("1 : To create Vehicle object");
-        System.out.println("2 : To create Car object");
-        System.out.println("3 : To create Convertible object");
-        System.out.println("4 : To create SportCar object");
-        int x= sc.nextInt();
-        switch(x){
-            case 1 : 
-                       Vehicle v = new Vehicle(6,5,102,"China");
-                       v.display();
-                       break;
-             case 2 : 
-                       Car c = new Car(101,"india",2);
-                       c.display();
-                       break;
-             case 3 : 
-                     //  Vehicle v = new Vehicle();
-                       break;
-             case 4 : 
-                      // Vehicle v = new Vehicle();
-                       break;
-    }
+        Student s = new Hosteller(101, "john", 102,"787992332","male","Mohini",222);
+         
+          Hosteller h = (Hosteller)s;
+           h.display();
+           h.modifyNumber("9123235435");
+           h.modifyRoomNumber(333);
+           h.display();
 }
 }
