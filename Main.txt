@@ -1,29 +1,45 @@
 
-package power;
+package carCategory;
 
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String a[])
-    {
-        String x;
-        String y;
-        Power p = new Power();  
-        Scanner sc = new Scanner(System.in);
-         System.out.println("Enter any Number"); 
-        x = sc.next();
-        if(p.numberOrNot(x)){      
-        System.out.println("Enter the Power value");
-        y = sc.next();                  
-        if(p.intOrNot(y)){
-                double result = p.raisePower(Double.parseDouble(x),Integer.parseInt(y));
-                System.out.println("Result = "+result);
-        }else{
-            System.out.println("Power Should be an integer value");
-        }
-        }else{
-            System.out.println("You Must enter a number");
-        }
-
-    }
+   public static void main(String a[]){ 
+   int x;
+   String model = null;
+       CarCategory c = new CarCategory();
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the choices for Category:");
+       System.out.println("1  : SUV ");
+       System.out.println("2  : SEDAN");
+       System.out.println("3  : ECONOMY ");
+       System.out.println("4  : MINI ");
+       System.out.println("0  : EXIT ");
+       do{
+       x = sc.nextInt();
+       switch(x){
+           case 1 : 
+                 model = c.modelOfCategory("SUV");
+                 System.out.println(model);
+                 break;
+           case 2 :
+               model = c.modelOfCategory("SEDAN");
+               System.out.println(model);
+                 break;
+           case 3 : 
+               model = c.modelOfCategory("ECONOMY");
+               System.out.println(model);
+               break;
+           case 4 :
+               model = c.modelOfCategory("MINI");
+               System.out.println(model);
+               break;
+           case 0 :
+           System.out.println("Exit");
+                 break;      
+       }
+             
+       }while(x!=0);  
+   }
+ 
 }
