@@ -1,0 +1,22 @@
+
+package car;
+
+
+public class Vehicle extends Car{
+    int noOfWheel;
+    int noOfPassenger;
+    int model;
+    String make;
+
+    public Vehicle(int wheels, int pass, int model, String make) {
+       super(model,make,0);
+        noOfWheel = wheels;
+        noOfPassenger = pass;
+        this.model = model;;
+        this.make = make;
+    }
+  public void display(){
+        System.out.println("Wheels  = "+noOfWheel+" Passengers = "+noOfPassenger+" Model = "+model+" Make = "+make);
+    }   
+   
+}

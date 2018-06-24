@@ -1,0 +1,12 @@
+
+package car;
+
+public class Convertible extends Car{
+    boolean isHoodOpen;
+
+    public Convertible(int mod, String mak, int door) {
+        super(mod, mak, door);
+        
+    }
+    
+}

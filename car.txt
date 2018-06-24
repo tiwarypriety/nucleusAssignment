@@ -1,0 +1,32 @@
+
+package car;
+
+public class Car {
+   private int noOfDoor;
+   private String make;
+   private int model;
+    Car(int mod ,String mak, int door){
+        make = mak;
+       model = mod;
+       noOfDoor = door;
+        
+    }    
+    public int getNoOfDoor() {
+        return noOfDoor;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public int getModel() {
+        return model;
+    }
+
+ public void display(){
+    System.out.println("Model = "+getModel()+" Make = "+getMake()+" Doors = "+getNoOfDoor());
+    } 
+
+
+   
+ }

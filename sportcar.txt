@@ -1,0 +1,10 @@
+package car;
+
+public class SportCar extends Car{
+   
+    SportCar(){
+ 
+    
+}
+  
+}
