@@ -1,0 +1,24 @@
+
+package worker;
+
+import java.util.Scanner;
+
+public class HourlyWorker extends Worker{
+   
+    public HourlyWorker(String name,int salRate) {
+   super(name,salRate);
+    }
+    
+ void computePay(int hours) {
+  if(hours<40)
+  {
+  salary = hours*getSalaryRate();
+  }
+  else {
+     salary= 40*getSalaryRate();
+     salary = salary + ((hours-40)*getSalaryRate());
+  }
+     System.out.println("Salary = "+salary);
+ }
+
+}

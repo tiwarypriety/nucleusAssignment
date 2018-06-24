@@ -1,0 +1,34 @@
+
+package power;
+
+public class Power {
+    double power = 1;
+   double raisePower(double x, int y) {
+    
+    for(int i=1; i<=y; i++){
+    power = power*x;
+    }
+   return power;
+    }
+    boolean intOrNot(String a){
+    try{
+       Integer.parseInt(a);
+        return true; 
+    }
+    catch(Exception e){
+        return false;
+       
+    } 
+}
+    boolean numberOrNot(String a){
+    try{
+        
+       Double.parseDouble(a);
+          return true;
+    }
+    catch(Exception e){
+        return false;
+       
+    }  
+}
+}

@@ -1,0 +1,34 @@
+
+
+package student;
+
+public class Hosteller extends Student{
+    private String hName;
+    private int roomNumber;
+
+    public Hosteller(int id, String name, int cId, String contact, String sex,String hName,int roomNumber) {
+        super(id, name, cId, contact, sex);
+        this.hName = hName;
+        this.roomNumber = roomNumber;
+       
+    }
+     void display(){
+       System.out.println(getId()+" "+getName()+" "+getContact()+" "+getcId()+" "+getSex()+" "+gethName()+" "+getRoomNumber());
+   }
+    void modifyRoomNumber(int num)
+    {
+        setRoomNumber(num);
+    }
+
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public String gethName() {
+        return hName;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+}

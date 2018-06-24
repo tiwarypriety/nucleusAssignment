@@ -1,0 +1,16 @@
+
+package student;
+
+
+public class Main {
+    
+    public static void main(String a[]){
+        Student s = new Hosteller(101, "john", 102,"787992332","male","Mohini",222);
+         
+          Hosteller h = (Hosteller)s;
+           h.display();
+           h.modifyNumber("9123235435");
+           h.modifyRoomNumber(333);
+           h.display();
+}
+}

@@ -1,0 +1,37 @@
+
+package worker;
+
+public class Worker {
+   private String name;
+ private int salaryRate;
+ private int hours;
+  double salary;
+ Worker(String n,int s) {
+  this.name=n;
+  this.salaryRate=s;
+}
+ void computePay(int hours){
+     this.hours = hours;
+ }
+ void display(){
+     System.out.println("Worker Name = "+getName()+" Salary Rate = "+getSalaryRate());
+   
+ }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getSalaryRate() {
+        return salaryRate;
+    }
+
+    public void setSalaryRate(int salaryRate) {
+        this.salaryRate = salaryRate;
+    }
+
+
+    public int getHours() {
+        return hours;
+    }
+}

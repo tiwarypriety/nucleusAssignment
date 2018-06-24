@@ -1,0 +1,22 @@
+package bankingSystem;
+
+public class CurrentAccount extends Account{
+    int tradeLicense;
+    CurrentAccount(){
+        
+    }
+    public CurrentAccount(String name, double accountBalance) {
+        super(name, accountBalance);
+    }
+    double getBanlace(){
+    return getAccountBalance();
+    }
+    public void withdraw(double amount){
+        if(amount<getAccountBalance()){
+            setAccountBalance(getAccountBalance()-amount);
+            
+        }else{
+            System.out.println("Insuficient Balance");
+        }
+    }    
+}

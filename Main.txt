@@ -1,0 +1,29 @@
+
+package power;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String a[])
+    {
+        String x;
+        String y;
+        Power p = new Power();  
+        Scanner sc = new Scanner(System.in);
+         System.out.println("Enter any Number"); 
+        x = sc.next();
+        if(p.numberOrNot(x)){      
+        System.out.println("Enter the Power value");
+        y = sc.next();                  
+        if(p.intOrNot(y)){
+                double result = p.raisePower(Double.parseDouble(x),Integer.parseInt(y));
+                System.out.println("Result = "+result);
+        }else{
+            System.out.println("Power Should be an integer value");
+        }
+        }else{
+            System.out.println("You Must enter a number");
+        }
+
+    }
+}

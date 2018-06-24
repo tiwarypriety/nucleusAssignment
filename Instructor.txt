@@ -1,0 +1,15 @@
+
+package person;
+
+public class Instructor extends Person{
+    
+  private double salary;
+  Instructor(String name, int year, double salary) {
+  super(name, year);
+  this.salary = salary;
+  }
+    public double getSalary() {
+        return salary;
+    }
+    
+}

@@ -1,0 +1,13 @@
+
+package worker;
+
+
+public class SalariedWorker extends Worker{
+   public SalariedWorker(String s,int salRate) {
+  super(s,salRate);
+ }
+void computePay() {
+  salary = 40*getSalaryRate();
+    System.out.println("Salary = "+salary );
+ }
+}

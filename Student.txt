@@ -1,0 +1,32 @@
+
+package student;
+
+public class Student {
+ private String name;
+ private String id;
+ private double grade;
+
+ Student(String name,String id,double grade){  
+     this.name = name;
+     this.id = id;
+     this.grade = grade;
+ }
+  Student(String name , String id){
+       this(name ,id ,0);
+        this.name = name;
+         this.id = id;
+    }
+ Student(String id){
+     this("null",id , 0);
+        this.id = id;
+    }
+
+    void display()
+    {
+        System.out.println("Name = "+name+" id = "+id+"Grade = "+grade);
+    }
+    void display(int year){
+        display();
+         System.out.println("Name = "+name+" id = "+id+"Grade = "+grade+"Year = "+year);
+    }
+}

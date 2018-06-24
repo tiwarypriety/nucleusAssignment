@@ -1,0 +1,17 @@
+package person;
+
+public class Student extends Person{
+    
+    private String major;
+  Student(String name, int year, String major) {
+    super(name, year);
+    this.major = major;
+  }
+  void display(){
+      System.out.println(getName()+" "+getYear()+" "+getMajor());
+  }
+
+    public String getMajor() {
+        return major;
+    }
+}
