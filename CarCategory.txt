@@ -1,0 +1,21 @@
+
+package carCategory;
+
+public class CarCategory {
+    
+    String modelOfCategory(String category){
+        if(category.equals("SUV")){
+        return "TATA SAFARI";
+        }
+        else if(category.equals("SEDAN")){
+        return "TATA INDIGO";
+        }else if(category.equals("ECONOMY")){
+        return "TATA INDICA";
+        }
+        else if(category.equals("MINI")){
+        return "TATA NANO";
+        }
+        else
+        return "unavailable category";
+    }
+}
