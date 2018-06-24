@@ -1,45 +1,41 @@
 
-package carCategory;
+package student;
 
 import java.util.Scanner;
 
 public class Main {
-   public static void main(String a[]){ 
-   int x;
-   String model = null;
-       CarCategory c = new CarCategory();
-       Scanner sc = new Scanner(System.in);
-       System.out.println("Enter the choices for Category:");
-       System.out.println("1  : SUV ");
-       System.out.println("2  : SEDAN");
-       System.out.println("3  : ECONOMY ");
-       System.out.println("4  : MINI ");
-       System.out.println("0  : EXIT ");
-       do{
-       x = sc.nextInt();
-       switch(x){
-           case 1 : 
-                 model = c.modelOfCategory("SUV");
-                 System.out.println(model);
-                 break;
-           case 2 :
-               model = c.modelOfCategory("SEDAN");
-               System.out.println(model);
-                 break;
-           case 3 : 
-               model = c.modelOfCategory("ECONOMY");
-               System.out.println(model);
-               break;
-           case 4 :
-               model = c.modelOfCategory("MINI");
-               System.out.println(model);
-               break;
-           case 0 :
-           System.out.println("Exit");
-                 break;      
-       }
-             
-       }while(x!=0);  
-   }
- 
+    public static void main(String a[]){
+        Student s = null;
+        int x;
+      Scanner sc  =new Scanner(System.in);
+        System.out.println("Enter Choice : ");
+        System.out.println("1 : To Create Student Object");
+        System.out.println("2 : To Display");
+        do{
+        x = sc.nextInt();
+        switch(x){
+            case 1 : 
+                    System.out.println("Enter Id");
+                   String id  = sc.next();
+                    System.out.println("Enter Name");
+                   String name = sc.next();
+                    System.out.println("Enter Grade");
+                   double grade = sc.nextDouble();
+                    s = new Student(name, id, grade);
+                    System.out.println("Object Created");
+                    break;
+            case 2 : 
+                   if(s == null)
+                   {
+                       System.out.println("Please Create an Object!!");
+                   }
+                   else{
+                       int year = sc.nextInt();
+                       s.display();                      
+                          }
+                   break;
+    }
+        }while(x!=1||x!=2);
+        
+   }  
 }
